@@ -1,47 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Welcome</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>Disease Prediction</title>
 	<input type = "button" onclick="send_message();" value="sendData" ></input>
 	<script type="text/javascript" src="js/socket.io.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
-	<form>
-		1) Age: &nbsp <input type="number" name="age" min="0"><br>
-		2) Gender:<br>
-		<input type="radio" name="gender" value=1>Male<br>
-		<input type="radio" name="gender" value=0>Female<br>
-		3) Chest Pain Type: <select name="cp">
-  			<option value="typical angina">Typical Angina</option>
-  			<option value="atypical angina">Atypical Angina</option>
- 			<option value="non-anginal pain">Non-Anginal Pain</option>
-  			<option value="asymptomatic">Asymptomatic</option>
-		</select><br>
-		4) Resting Blood Pressure: <input type="text" name="rbp" placeholder="(in mm Hg on admission to the hospital)" size="30%"><br>
-		5) Serum Cholestrol: <input type="text" name="chol" placeholder="(in mg/dl)"><br>
-		6) Is Your Fasting Blood Sugar > 120 mg/dl:<br>
-		<input type="radio" name="fbs" value=1>True<br>
-		<input type="radio" name="fbs" value=0>False<br>
-		7) Resting Electrocardiographic Results:<br>
-		<input type="radio" name="restecg" value=0>Normal<br>
-		<input type="radio" name="restecg" value=1>Having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)<br>
-		<input type="radio" name="restecg" value=2>Showing probable or definite left ventricular hypertrophy by Estes' criteria<br>
-		8) Maximum Heart Rate Achieved: <input type="text" name="thalach"><br>
-		9) Exercise Induced Angina:<br>
-		 	<input type="radio" name="exang" value=0>NO<br>
-		 	<input type="radio" name="exang" value=1>YES<br>
-		10) ST depression induced by exercise relative to rest:<input type="text" name="oldpeak"><br>
-		11) The slope of the peak exercise ST segment:<br> 
-			<input type="radio" name="slope" value=1>Upsloping<br>
-		 	<input type="radio" name="slope" value=2>Flat<br>
-		 	<input type="radio" name="slope" value=3>Downsloping<br>
-		12)	Number of major vessels (0-3) colored by flourosopy:<input type="number" name="ca" min="0" max="3"><br>
-		13) Thal: <input type="number" name="thal" min="0" max="7"><br>
-		14) Diagnosis of Heart Disease (angiographic disease status):<br>
-		    <input type="radio" name="num" value=0> < 50% diameter narrowing <br>
-		 	<input type="radio" name="num" value=1> > 50% diameter narrowing <br>
-		<button type="Submit">ALL DONE!</button>
-	</form>
+	<div class="col-lg-12">
+		<h1>We Care for Your Health Every Moment</h1>
+		<p>Fill up a Simple Survey and get to know about all the possible heart risks that you may have, ahead of time.</p>
+		<!-- <a class="main_btn mr-10" href="#">get started</a> -->
+	</div>
+	<div id="container-button">
+		<div class="clear"><a href="form.html"><input type="submit" class="btn-class" value="GO TO THE FORM" name="formButton" id="mc-embedded-subscribe" class="button"></a></div>
+	</div>
+	<div id="container-button2">
+		<div class="clear"><a href=""><input type="submit" class="btn-class" value="SUBSCRIBE" name="subscribe" id="mc-embedded-subscribe" class="button"></a></div>
+	</div>
 </body>
 </html>

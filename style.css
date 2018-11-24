@@ -1,0 +1,39 @@
+body{
+	background: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/85/54/9957ccc8955ec52.jpg") no-repeat center fixed;
+	background-size: cover;
+}
+
+#container-button {
+	width: 92%;
+    height: 76%;
+    /*border: 1px solid black;*/ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container-button2 {
+	width: 92%;
+    height: 76%;
+    /*border: 1px solid black;*/ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.btn-class{
+	border: 2px solid white;
+	border-radius: 0 0 0 0;
+	cursor: pointer;
+	font-family: Calibria;
+	padding: 10px;
+	font-weight: bold;
+	color: white;
+	background-color: transparent;
+	transition: all 1s;
+}
+
+.btn-class:hover{
+	transform: scale(1.1);
+}
