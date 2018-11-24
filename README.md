@@ -1,2 +1,0 @@
-# HeartDiseasePredictor
-HackWestern5
