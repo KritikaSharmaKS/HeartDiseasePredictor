@@ -14,3 +14,4 @@ Y = dataset.iloc[:, 13].values #matrix of dependent variables
 from sklearn.preprocessing import Imputer
 imputer = Imputer(missing_values = 'NaN', strategy = 'most_frequent', axis = 0)
 imputer.fit(X)
+X = imputer.transform(X)
