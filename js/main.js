@@ -14,12 +14,14 @@ socket.on('disconnect', function() {
 	alert("disconnected");
 	
 });
-function send_message(){
-	socket.send("asfd");
+function send_message(dataToBeSent){
+	alert("in send_message");
+	socket.emit("form data", dataToBeSent);
 	alert("sent");
 }
 
 function collect_data(){
+	alert("inside collect_data");
 	let gender = $('input[name=gender]:checked').val();
 	let chest_pain = $('#cp').attr('selected','selected').val();
 	let age = $("#age").val();
@@ -34,6 +36,24 @@ function collect_data(){
 	let ca = $("#ca").val();
 	let thal = $("#thal").val();
 	let num = $('input[name=num]:checked').val();
+	let myObject = {
+		genderKey: gender,
+		cp: chest_pain,
+		ageKey: age,
+		rbp: resting_bp,
+		cholKey: chol,
+		fbsKey: fbs,
+		restecgKey: restecg,
+		thalachKey: thalach,
+		exangKey: exang,
+		oldpeakKey: oldpeak,
+		slopeKey: slope,
+		caKey: ca,
+		thalKey: thal,
+		numKey: num
+	};
+	alert("inside collect_data 2");
+	send_message(myObject);
 } 
 
 socket.on('message', function(data) {

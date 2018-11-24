@@ -7,19 +7,19 @@
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
-
 	
 		1) Age: &nbsp <input id = "age" type="number" min="0"><br>
 		2) Gender:<br>
 		<input type="radio" name="gender" value="1">Male<br>
 		<input type="radio" name="gender" value="0">Female<br>
 		3) Chest Pain Type: <select id="cp">
+			<option value="none" selected="True">None</option>
   			<option value="typical angina">Typical Angina</option>
   			<option value="atypical angina">Atypical Angina</option>
  			<option value="non-anginal pain">Non-Anginal Pain</option>
   			<option value="asymptomatic">Asymptomatic</option>
 		</select><br>
-		4) Resting Blood Pressure: <input type="text" id="rbp" placeholder="(in mm Hg on admission to the hospital)" size="30%"><br>
+		4) Resting Blood Pressure: <input type="text" id="rbp" placeholder="(in mm Hg on admission to the hospital)" size="30%" required><br>
 		5) Serum Cholestrol: <input type="text" id="chol" placeholder="(in mg/dl)"><br>
 		6) Is Your Fasting Blood Sugar > 120 mg/dl:<br>
 		<input type="radio" name="fbs" value=1>True<br>
@@ -42,7 +42,7 @@
 		14) Diagnosis of Heart Disease (angiographic disease status):<br>
 		    <input type="radio" name="num" value=0> < 50% diameter narrowing <br>
 		 	<input type="radio" name="num" value=1> > 50% diameter narrowing <br>
-		<button id = "send_data">ALL DONE!</button>
+			<button id = "send_data">ALL DONE!</button>
 		
 	
 </body>
