@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Disease Prediction</title>
+</head>
+<body>
+	<form>
+		1) Age: <input type="number" name="age"><br>
+		2) Gender:<br>
+		Male <input type="radio" name="gender" value=1><br>
+		Female <input type="radio" name="gender" value=0><br>
+		3) Chest Pain Type: <select name="cp">
+  			<option value="typical angina">Typical Angina</option>
+  			<option value="atypical angina">Atypical Angina</option>
+ 			<option value="non-anginal pain">Non-Anginal Pain</option>
+  			<option value="asymptomatic">Asymptomatic</option>
+		</select><br>
+		4) Resting Blood Pressure: <input type="text" name="rbp" placeholder="(in mm Hg on admission to the hospital)" size="30%"><br>
+		5) Serum Cholestrol: <input type="text" name="chol" placeholder="(in mg/dl)"><br>
+		6) Is Your Fasting Blood Sugar > 120 mg/dl:<br>
+		True <input type="radio" name="fbs" value=1><br>
+		False <input type="radio" name="fbs" value=0><br>
+		7) Resting Electrocardiographic Results:<br>
+		<input type="radio" name="restecg" value=0>Normal<br>
+		<input type="radio" name="restecg" value=1>Having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)<br>
+		<input type="radio" name="restecg" value=2>Showing probable or definite left ventricular hypertrophy by Estes' criteria<br>
+		8) Maximum Heart Rate Achieved: <input type="text" name="thalach"><br>
+		9) Exercise Induced Angina:<br>
+		 	<input type="radio" name="exang" value=0>NO<br>
+		 	<input type="radio" name="exang" value=1>YES<br>
+
+	</form>
+</body>
+</html>
