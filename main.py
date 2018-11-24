@@ -30,5 +30,12 @@ X_test = sc_X.transform(X_test)
 
 # K-Nearest Neighbos (K-NN)
 from sklearn.neighbors import KNeighborsClassifier
-classifier = KNeighborsClassifier(n_neighbors = 3, metric = 'minkowski', p = 2)
+classifier = KNeighborsClassifier(n_neighbors = 7, metric = 'minkowski', p = 2)
 classifier.fit(X_train, Y_train)
+
+# Predicting the test set result
+Y_pred = classifier.predict(X_test)
+
+# Making the confusion matrix
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(Y_test, Y_pred)
