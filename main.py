@@ -8,7 +8,7 @@ from sklearn.utils import shuffle
 
 # Import the dataset
 dataset = pd.read_csv('heart.csv')
-dataset = shuffle(dataset)
+#dataset = shuffle(dataset)
 X = dataset.iloc[:, :-1].values #matrix of independent variables
 Y = dataset.iloc[:, 13].values #matrix of dependent variables
 
@@ -27,3 +27,8 @@ from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler()
 X_train = sc_X.fit_transform(X_train)
 X_test = sc_X.transform(X_test)
+
+# K-Nearest Neighbos (K-NN)
+from sklearn.neighbors import KNeighborsClassifier
+classifier = KNeighborsClassifier(n_neighbors = 3, metric = 'minkowski', p = 2)
+classifier.fit(X_train, Y_train)
