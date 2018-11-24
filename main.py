@@ -30,11 +30,28 @@ X_test = sc_X.transform(X_test)
 
 # K-Nearest Neighbos (K-NN)
 from sklearn.neighbors import KNeighborsClassifier
-classifier = KNeighborsClassifier(n_neighbors = 7, metric = 'minkowski', p = 2)
-classifier.fit(X_train, Y_train)
+knn_classifier = KNeighborsClassifier(n_neighbors = 10, metric = 'minkowski', p = 2)
+knn_classifier.fit(X_train, Y_train)
+print("{} NN Score: {:.2f}%".format(10, knn_classifier.score(X_test, Y_test)*100))
+
+# Try to find best k value
+"""scoreList = []
+for i in range(1,20):
+    knn_classifier2 = KNeighborsClassifier(n_neighbors = i)  # n_neighbors means k
+    knn_classifier2.fit(X_train, Y_train)
+    scoreList.append(knn_classifier2.score(X_test, Y_test))
+    
+plt.plot(range(1,20), scoreList)
+plt.xticks(np.arange(1,20,1))
+plt.xlabel("K value")
+plt.ylabel("Score")
+plt.show()
+
+
+print("Maximum KNN Score is {:.2f}%".format((max(scoreList))*100))"""
 
 # Predicting the test set result
-Y_pred = classifier.predict(X_test)
+Y_pred = knn_classifier.predict(X_test)
 
 # Making the confusion matrix
 from sklearn.metrics import confusion_matrix
