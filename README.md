@@ -1,5 +1,31 @@
 # Heart Disease Predictor
 
+## Inspiration
+Scroll down and you'll see in the charts that almost 50% people who went to dotors for heart diseases checkup, had a heart disease. This was the biggest point of inspiration for us. We wanted to, and have built a website that can predict the chances of a person having heart disease just by asking a few quick questions from them.
+
+## What it does
+This aplication asks various questions from the user and based on the responses, it predicts the chances of that person being exposed to one or more heart related diseases.
+
+## How we built it
+We build it using HTML, CSS and Javascript in the fontend.
+We used Python and its various libraries in the backend.
+We used KNN Algorithm, a machine learning algorithm, and predicted the chances of having a heart disease.
+
+## Challenges we ran into
+1. Connecting Python backend to Web frontend.
+2. Making 2 different front ends for two types of users: doctors and non-doctors.
+3. Increasing the accuracy of prediction using KNN.
+
+## Accomplishments that we're proud of
+1. We are proud that we are able to achieve 88.52% accuracy when doctors use this application.
+2. 80.33% accuracy when non-doctors use this application as the data we collect here is limited.
+
+## What we learned
+We learned many things, how to connect python with web applications, why KNN is used and how to develop a KNN algorithm.
+
+## What's next for HeartDiseasePredictor
+We would like to work more on increasing the accuracy of prediction. That can be achieved by making this machine learning algortihm more dynamic that can learn with increased usage.
+
 ## Doctor's Version
 ```python
 # Data Preprocessing Doctor's version
