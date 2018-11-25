@@ -56,3 +56,12 @@ Y_pred = knn_classifier.predict(X_test)
 # Making the confusion matrix
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(Y_test, Y_pred)
+
+# Visualising the training set results
+
+# Visualising the test set results
+
+
+
+
+
