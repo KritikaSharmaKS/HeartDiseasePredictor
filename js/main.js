@@ -4,6 +4,15 @@ $(document).ready(function(){
 	});
 });
 
+$("#formfordoc").click(function(){
+	$('#exampleModalLong').modal('show');
+});
+
+$("#formforelse").click(function(){
+	$('#exampleModalLong2').modal('show');
+});
+
+
 var socket = io.connect('http://' + "127.0.0.1" + ':' + "5000");
 socket.on('connect', function() {
 	alert("connected");
