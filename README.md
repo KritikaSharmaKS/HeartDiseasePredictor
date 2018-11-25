@@ -1,6 +1,6 @@
-#Heart Disease Predictor
+# Heart Disease Predictor
 
-#Doctor's Version
+# Doctor's Version
 ```python
 # Data Preprocessing Doctor's version
 
@@ -90,7 +90,7 @@ plt.show()
 ![png](output_3_0.png)
 
 
-#Normal Version
+# Normal Version
 ```python
 # Data Preprocessing - Non Doctor's version
 
