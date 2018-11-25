@@ -145,42 +145,43 @@
                      </div>
                 <div class="modal-body">
                 
-                1) Age: &nbsp <input id = "age" type="number" min="0"><br>
-                2) Gender:<br>
-                    <input type="radio" name="gender" value="1">Male<br>
-                    <input type="radio" name="gender" value="0">Female<br>
-                3) Chest Pain Type: <select id="cp">
-                    <option value="none" selected="True">None</option>
-                    <option value="typical angina">Typical Angina</option>
-                    <option value="atypical angina">Atypical Angina</option>
-                    <option value="non-anginal pain">Non-Anginal Pain</option>
-                    <option value="asymptomatic">Asymptomatic</option>
-                    </select><br>
-                4) Resting Blood Pressure: <input type="text" id="rbp" placeholder="(in mm Hg on admission to the hospital)" size="30%" required><br>
-                5) Serum Cholestrol: <input type="text" id="chol" placeholder="(in mg/dl)"><br>
-                6) Is Your Fasting Blood Sugar > 120 mg/dl:<br>
-                    <input type="radio" name="fbs" value=1>True<br>
-                    <input type="radio" name="fbs" value=0>False<br>
-                7) Resting Electrocardiographic Results:<br>
-                    <input type="radio" name="restecg" value=0>Normal<br>
-                    <input type="radio" name="restecg" value=1>Having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)<br>
-                    <input type="radio" name="restecg" value=2>Showing probable or definite left ventricular hypertrophy by Estes' criteria<br>
-                8) Maximum Heart Rate Achieved: <input type="text" id="thalach"><br>
-                9) Exercise Induced Angina:<br>
-                    <input type="radio" name="exang" value=0>NO<br>
-                    <input type="radio" name="exang" value=1>YES<br>
-                10) ST depression induced by exercise relative to rest:<input type="text" id="oldpeak"><br>
-                11) The slope of the peak exercise ST segment:<br> 
-                    <input type="radio" name="slope" value=1>Upsloping<br>
-                    <input type="radio" name="slope" value=2>Flat<br>
-                    <input type="radio" name="slope" value=3>Downsloping<br>
-                12) Number of major vessels (0-3) colored by flourosopy:<input type="number" id="ca" min="0" max="3"><br>
-                13) Thal: <input type="number" id="thal" min="0" max="7"><br>
+                 <label>1) Age:</label> 
+                    <input class = "form-control" id = "age" type="number" min="0">
+                <label>2) Gender:</label>
+                   <div class="radio"><label> <input type="radio" name="gender" value="1">Male</label></div>
+                    <div class="radio"><label><input type="radio" name="gender" value="0">Female</label></div>
+                <label>3) Chest Pain Type:</label> <select id="cp" class = "form-control">
+                    <option value="0" selected="True">None</option>
+                    <option value="1">Typical Angina</option>
+                    <option value="2">Atypical Angina</option>
+                    <option value="3">Non-Anginal Pain</option>
+                    <option value="4">Asymptomatic</option>
+                    </select>
+                <label>4) Resting Blood Pressure:</label> <input class = "form-control" type="text" id="rbp" placeholder="(in mm Hg)" size="20%">
+                <label>5) Serum Cholestrol:</label> <input type="text" class = "form-control" id="chol" placeholder="(in mg/dl)">
+                <label>6) Is Your Fasting Blood Sugar > 120 mg/dl:</label>
+                    <div class="radio"><label><input type="radio" name="fbs" value=1>True</label></div>
+                    <div class="radio"><label><input type="radio" name="fbs" value=0>False</label></div>
+                <label>7) Resting Electrocardiographic Results:</label>
+                    <div class="radio"><label><input type="radio" name="restecg" value=0>Normal</label></div>
+                    <div class="radio"><label><input type="radio" name="restecg" value=1>Having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)</label></div>
+                    <div class="radio"><label><input type="radio" name="restecg" value=2>Showing probable or definite left ventricular hypertrophy by Estes' criteria</label></div>
+                <label>8) Maximum Heart Rate Achieved:</label> <input type="text" class = "form-control" id="thalach">
+                <label>9) Exercise Induced Angina:</label>
+                     <div class="radio"><label><input type="radio" name="exang" value=0>NO</label></div>
+                     <div class="radio"><label><input type="radio" name="exang" value=1>YES</label></div>
+                <label>10) ST depression induced by exercise relative to rest:</label><input type="text" class = "form-control" id="oldpeak">
+               <label>11) The slope of the peak exercise ST segment:</label> <br> 
+                    <div class="radio"><label><input type="radio" name="slope" value=1>Upsloping</label></div>
+                    <div class="radio"><label><input type="radio" name="slope" value=2>Flat</label></div>
+                    <div class="radio"><label><input type="radio" name="slope" value=3>Downsloping</label></div>
+                <label>12) Number of major vessels (0-3) colored by flourosopy:</label><input class = "form-control" type="number" id="ca" min="0" max="3">
+                <label>13) Thalassemia:</label> <input type="number" class = "form-control" id="thal" min="0" max="7">
 
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button id="send_data" type="button" class="btn btn-primary">Save changes</button>
                 </div>
                 </div>
             </div>
@@ -198,40 +199,36 @@
                      </div>
                 <div class="modal-body">
                 
-                1) Age: &nbsp <input id = "age" type="number" min="0"><br>
-                2) Gender:<br>
-                    <input type="radio" name="gender" value="1">Male<br>
-                    <input type="radio" name="gender" value="0">Female<br>
-                3) Chest Pain Type: <select id="cp">
-                    <option value="none" selected="True">None</option>
-                    <option value="typical angina">Typical Angina</option>
-                    <option value="atypical angina">Atypical Angina</option>
-                    <option value="non-anginal pain">Non-Anginal Pain</option>
-                    <option value="asymptomatic">Asymptomatic</option>
-                    </select><br>
-                4) Resting Blood Pressure: <input type="text" id="rbp" placeholder="(in mm Hg on admission to the hospital)" size="30%" required><br>
-                5) Serum Cholestrol: <input type="text" id="chol" placeholder="(in mg/dl)"><br>
-                6) Is Your Fasting Blood Sugar > 120 mg/dl:<br>
-                    <input type="radio" name="fbs" value=1>True<br>
-                    <input type="radio" name="fbs" value=0>False<br>
-                7) Maximum Heart Rate Achieved: <input type="text" id="thalach"><br>
-                8) Exercise Induced Angina:<br>
-                    <input type="radio" name="exang" value=0>NO<br>
-                    <input type="radio" name="exang" value=1>YES<br>
-
+                <label>1) Age:</label> 
+                    <input class = "form-control" id = "age" type="number" min="0">
+                <label>2) Gender:</label>
+                   <div class="radio"><label> <input type="radio" name="gender" value="1">Male</label></div>
+                    <div class="radio"><label><input type="radio" name="gender" value="0">Female</label></div>
+                <label>3) Chest Pain Type:</label> <select id="cp" class = "form-control">
+                    <option value="0" selected="True">None</option>
+                    <option value="1">Typical Angina</option>
+                    <option value="2">Atypical Angina</option>
+                    <option value="3">Non-Anginal Pain</option>
+                    <option value="4">Asymptomatic</option>
+                    </select>
+                <label>4) Resting Blood Pressure:</label> <input class = "form-control" type="text" id="rbp" placeholder="(in mm Hg)" size="20%">
+                <label>5) Serum Cholestrol:</label> <input type="text" class = "form-control" id="chol" placeholder="(in mg/dl)">
+                <label>6) Is Your Fasting Blood Sugar > 120 mg/dl:</label>
+                    <div class="radio"><label><input type="radio" name="fbs" value=1>True</label></div>
+                    <div class="radio"><label><input type="radio" name="fbs" value=0>False</label></div>
+                <label>7) Maximum Heart Rate Achieved:</label> <input type="text" class = "form-control" id="thalach">
+                <label>8) Exercise Induced Angina:</label>
+                     <div class="radio"><label><input type="radio" name="exang" value=0>NO</label></div>
+                     <div class="radio"><label><input type="radio" name="exang" value=1>YES</label></div>
+                
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button id="send_less_data" type="button" class="btn btn-primary">Save changes</button>
                 </div>
                 </div>
             </div>
         </div>
-
-
-
-
-
 
 
 

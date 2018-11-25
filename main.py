@@ -9,6 +9,7 @@ from sklearn.utils import shuffle
 # Import the dataset
 dataset = pd.read_csv('heart.csv')
 #dataset = shuffle(dataset)
+#X = dataset.iloc[:, [0,1,2,3,4,5,7,8]].values #matrix of independent variables
 X = dataset.iloc[:, :-1].values #matrix of independent variables
 Y = dataset.iloc[:, 13].values #matrix of dependent variables
 
@@ -35,7 +36,7 @@ knn_classifier.fit(X_train, Y_train)
 print("{} NN Score: {:.2f}%".format(10, knn_classifier.score(X_test, Y_test)*100))
 
 # Try to find best k value
-"""scoreList = []
+scoreList = []
 for i in range(1,20):
     knn_classifier2 = KNeighborsClassifier(n_neighbors = i)  # n_neighbors means k
     knn_classifier2.fit(X_train, Y_train)
@@ -48,7 +49,7 @@ plt.ylabel("Score")
 plt.show()
 
 
-print("Maximum KNN Score is {:.2f}%".format((max(scoreList))*100))"""
+print("Maximum KNN Score is {:.2f}%".format((max(scoreList))*100))
 
 # Predicting the test set result
 Y_pred = knn_classifier.predict(X_test)
