@@ -16,8 +16,9 @@ $("#getStarted").click(function(){
 	return false;
 });
 
-
-
+$("#stats").click(function(){
+	$('#exampleModalLong3').modal('show');
+});
 
 $("#formfordoc").click(function(){
 	$('#exampleModalLong').modal('show');

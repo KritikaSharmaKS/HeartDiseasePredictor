@@ -6566,8 +6566,15 @@ button.close {
 
 #formfordoc:hover{
   transform: scale(1.5);
+  transition: all 1s;
 }
 
 #formforelse:hover{
   transform: scale(1.5);
+  transition: all 1s;
+}
+
+#stats:hover{
+  transform: scale(1.1);
+  transition: all 0.5s;
 }
