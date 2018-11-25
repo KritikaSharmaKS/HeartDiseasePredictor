@@ -39,13 +39,13 @@ socket.on('disconnect', function() {
 	
 });
 function send_message(dataToBeSent){
-	alert("in send_message");
+	//alert("in send_message");
 	socket.emit("form data", dataToBeSent);
-	alert("sent");
+	//alert("sent");
 }
 
 function collect_data(){
-	alert("inside collect_data");
+	//alert("inside collect_data");
 	let gender = $('input[name=gender]:checked').val();
 	let chest_pain = $('#cp').attr('selected','selected').val();
 	let age = $("#age").val();
@@ -76,13 +76,13 @@ function collect_data(){
 		thalKey: thal,
 		numKey: num
 	};
-	alert("inside collect_data 2");
+	//alert("inside collect_data 2");
 	send_message(myObject);
 } 
 
 
 function collect_less_data(){
-	alert("inside collect_data");
+	//alert("inside collect_data");
 	let gender = $('input[name=gender]:checked').val();
 	let chest_pain = $('#cp').attr('selected','selected').val();
 	let age = $("#age_short").val();
@@ -114,12 +114,12 @@ function collect_less_data(){
 		thalKey: thal,*/
 		numKey: num
 	};
-	alert("inside collect_data 2");
+	//alert("inside collect_data 2");
 	send_message(myObject);
 } 
 
 socket.on('message', function(data) {
-	alert("hello test");
+	//alert("hello test");
 	if(data[0] == "Result"){
 		if(data[1]==='1'){
 			console.log('yes');
