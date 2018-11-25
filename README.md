@@ -15,6 +15,7 @@ We used KNN Algorithm, a machine learning algorithm, and predicted the chances o
 1. Connecting Python backend to Web frontend.
 2. Making 2 different front ends for two types of users: doctors and non-doctors.
 3. Increasing the accuracy of prediction using KNN.
+4. Cleaning the data before applying the KNN algorithm.
 
 ## Accomplishments that we're proud of
 1. We are proud that we are able to achieve 88.52% accuracy when doctors use this application.
