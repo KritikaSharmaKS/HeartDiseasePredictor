@@ -118,13 +118,17 @@ function collect_less_data(){
 	send_message(myObject);
 } 
 
-
-
-
 socket.on('message', function(data) {
 	alert("hello test");
 	if(data[0] == "Result"){
-		alert(data[1])
+		if(data[1]===1){
+			$('#failure_alert').alert('show');
+			/*alert("You have a high probability of having a heart disease");*/
+		}else{
+			$('#success_alert').alert('show');
+			/*alert("You seem to be just fine, 
+			but don't take this for granted, Exercise and Eat Healthy to Stay this way!:)");*/
+		}	
 	}
 });
 
