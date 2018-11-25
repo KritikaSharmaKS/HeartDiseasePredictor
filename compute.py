@@ -28,14 +28,44 @@ def computeResult(X_test_new):
     sc_X = StandardScaler()
     X_train = sc_X.fit_transform(X_train)
     X_test_new = sc_X.transform(X_test_new)
-    print(X_train)
-    print('and now \n')
-    print(X_test_new)
     
     # K-Nearest Neighbos (K-NN)
     from sklearn.neighbors import KNeighborsClassifier
     knn_classifier = KNeighborsClassifier(n_neighbors = 10, metric = 'minkowski', p = 2)
     knn_classifier.fit(X_train, Y_train)
+    
+    # Predicting the test set result
+    Y_pred = knn_classifier.predict(X_test_new)
+    return Y_pred[0]
+
+def computeResultNormal(X_test_new):
+    # Import the dataset
+    dataset = pd.read_csv('heart.csv')
+    #dataset = shuffle(dataset)
+    X = dataset.iloc[:, [0,1,2,3,4,5,7,8]].values #matrix of independent variables
+    Y = dataset.iloc[:, 13].values #matrix of dependent variables
+    
+    # Taking care of missing data
+    from sklearn.preprocessing import Imputer
+    imputer = Imputer(missing_values = 'NaN', strategy = 'most_frequent', axis = 0)
+    imputer.fit(X)
+    X = imputer.transform(X)
+    
+    # Splitting the dataset into training and test set
+    from sklearn.cross_validation import train_test_split
+    X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.05, random_state = 0)
+    
+    # Feature Scaling
+    from sklearn.preprocessing import StandardScaler
+    sc_X = StandardScaler()
+    X_train = sc_X.fit_transform(X_train)
+    X_test_new = sc_X.transform(X_test_new)
+    
+    # K-Nearest Neighbos (K-NN)
+    from sklearn.neighbors import KNeighborsClassifier
+    knn_classifier = KNeighborsClassifier(n_neighbors = 4, metric = 'minkowski', p = 2)
+    knn_classifier.fit(X_train, Y_train)
+    
     # Predicting the test set result
     Y_pred = knn_classifier.predict(X_test_new)
     return Y_pred[0]

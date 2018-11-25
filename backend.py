@@ -36,8 +36,12 @@ if __name__ == '__main__':
         
     @socketio.on('form data')
     def handle_my_custom_event(json):
-        X = np.array([[json["ageKey"],json["genderKey"],json["cp"],json["rbp"],json["cholKey"],json["fbsKey"],json["restecgKey"],json["thalachKey"],json["exangKey"],json["oldpeakKey"],json["slopeKey"],json["caKey"],json["thalKey"]]])
-        send(["Result" , str(c.computeResult(X))])
+        if "restecgKey" in json:
+            X = np.array([[json["ageKey"],json["genderKey"],json["cp"],json["rbp"],json["cholKey"],json["fbsKey"],json["restecgKey"],json["thalachKey"],json["exangKey"],json["oldpeakKey"],json["slopeKey"],json["caKey"],json["thalKey"]]])
+            send(["Result" , str(c.computeResult(X))])
+        else:
+            X = np.array([[json["ageKey"],json["genderKey"],json["cp"],json["rbp"],json["cholKey"],json["fbsKey"],json["thalachKey"],json["exangKey"]]])
+            send(["Result" , str(c.computeResultNormal(X))])
     
     
 

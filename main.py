@@ -9,8 +9,8 @@ from sklearn.utils import shuffle
 # Import the dataset
 dataset = pd.read_csv('heart.csv')
 #dataset = shuffle(dataset)
-#X = dataset.iloc[:, [0,1,2,3,4,5,7,8]].values #matrix of independent variables
-X = dataset.iloc[:, :-1].values #matrix of independent variables
+X = dataset.iloc[:, [0,1,2,3,4,5,7,8]].values #matrix of independent variables
+#X = dataset.iloc[:, :-1].values #matrix of independent variables
 Y = dataset.iloc[:, 13].values #matrix of dependent variables
 
 # Taking care of missing data
@@ -21,7 +21,7 @@ X = imputer.transform(X)
 
 # Splitting the dataset into training and test set
 from sklearn.cross_validation import train_test_split
-X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.2, random_state = 0)
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.05, random_state = 0)
 
 # Feature Scaling
 from sklearn.preprocessing import StandardScaler
