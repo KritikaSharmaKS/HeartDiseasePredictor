@@ -2,11 +2,13 @@ $(document).ready(function(){
 	$( "#send_data" ).click(function() {
 		collect_data();
 	});
+	$('#failure_alert').hide();
 });
 $(document).ready(function(){
 	$( "#send_less_data" ).click(function() {
 		collect_less_data();
 	});
+	$('#success_alert').hide();
 });
 
 $("#getStarted").click(function(){
@@ -123,10 +125,12 @@ socket.on('message', function(data) {
 	if(data[0] == "Result"){
 		if(data[1]==='1'){
 			console.log('yes');
-			alert("You have a high probability of having a heart disease");
+			$('#failure_alert').show();
+			/*alert("You have a high probability of having a heart disease");*/
 		}else if(data[1]==='0'){
 			console.log('no');
-			alert("You seem to be just fine, but don't take this for granted, Exercise and Eat Healthy to Stay this way!:)");
+			$('#failure_alert').show();
+			/*alert("You seem to be just fine, but don't take this for granted, Exercise and Eat Healthy to Stay this way!:)");*/
 		}	
 	}
 });
