@@ -27,6 +27,10 @@ def computeResult(X_test_new):
     from sklearn.preprocessing import StandardScaler
     sc_X = StandardScaler()
     X_train = sc_X.fit_transform(X_train)
+    X_test_new = sc_X.transform(X_test_new)
+    print(X_train)
+    print('and now \n')
+    print(X_test_new)
     
     # K-Nearest Neighbos (K-NN)
     from sklearn.neighbors import KNeighborsClassifier
@@ -36,5 +40,6 @@ def computeResult(X_test_new):
     Y_pred = knn_classifier.predict(X_test_new)
     return Y_pred[0]
 
-X_test_new = np.array([[41,0,1,130,204,0,0,172,0,1.4,2,0,2]])
-print(computeResult(X_test_new))
+#X_test_new = np.array([[41,0,1,130,204,0,0,172,0,1.4,2,0,2]])
+#X_test_new = np.array([[54,1,0,120,188,0,1,113,0,1.4,1,1,3]])
+#print(computeResult(X_test_new))

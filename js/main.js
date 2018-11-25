@@ -57,7 +57,8 @@ function collect_data(){
 } 
 
 socket.on('message', function(data) {
-	if(data[0] == "processed_data"){
+	alert("hello test");
+	if(data[0] == "Result"){
 		alert(data[1])
 	}
 });
