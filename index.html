@@ -3,20 +3,118 @@
 <head>
 	<title>Welcome</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>Disease Prediction</title>
-	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+	<title>Heart Disease Predictor</title>
 </head>
 <body>
-	<div class="col-lg-12">
+<div class="body-container">	
+		<!--Bootstrap Navigation Bar Code-->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand">Welcome To Lifestyle Calculator</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="form.html">Form</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact.html">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+			<!-- <img src="https://3.bp.blogspot.com/-lihxV1DYBUQ/Wcopj_I3eOI/AAAAAAAAAuc/hGhEgCLwjYUDoVi26L_YCJbT3vqqA547QCK4BGAYYCw/s1600/indian%2Bspices%2Bsydney.jpg" class="img-fluid" alt="Responsive image"> -->
 		<h1>We Care for Your Health Every Moment</h1>
-		<p>Fill up a Simple Survey and get to know about all the possible heart risks that you may have, ahead of time.</p>
-		<!-- <a class="main_btn mr-10" href="#">get started</a> -->
+		<p>Fill up a Simple Survey and get to know about all the possible heart risks that you may have, ahead of time.
+  		So, that you can enjoy a helthy life, all the time:)</p>
+  		<!-- Button trigger modal -->
+		<button type="button" class="btn btn-primary" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalLong">
+  			Fill Form
+		</button>
+
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  			<div class="modal-dialog" role="document">
+    			<div class="modal-content">
+      				<div class="modal-header">
+        				<h5 class="modal-title" id="exampleModalLongTitle">Lifestyle Form</h5>
+        					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          						<span aria-hidden="true">&times;</span>
+        					</button>
+     				 </div>
+      			<div class="modal-body">
+        		
+        		1) Age: &nbsp <input id = "age" type="number" min="0"><br>
+				2) Gender:<br>
+					<input type="radio" name="gender" value="1">Male<br>
+					<input type="radio" name="gender" value="0">Female<br>
+				3) Chest Pain Type: <select id="cp">
+					<option value="none" selected="True">None</option>
+  					<option value="typical angina">Typical Angina</option>
+  					<option value="atypical angina">Atypical Angina</option>
+ 					<option value="non-anginal pain">Non-Anginal Pain</option>
+  					<option value="asymptomatic">Asymptomatic</option>
+					</select><br>
+				4) Resting Blood Pressure: <input type="text" id="rbp" placeholder="(in mm Hg on admission to the hospital)" size="30%" required><br>
+				5) Serum Cholestrol: <input type="text" id="chol" placeholder="(in mg/dl)"><br>
+				6) Is Your Fasting Blood Sugar > 120 mg/dl:<br>
+					<input type="radio" name="fbs" value=1>True<br>
+					<input type="radio" name="fbs" value=0>False<br>
+				7) Resting Electrocardiographic Results:<br>
+					<input type="radio" name="restecg" value=0>Normal<br>
+					<input type="radio" name="restecg" value=1>Having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)<br>
+					<input type="radio" name="restecg" value=2>Showing probable or definite left ventricular hypertrophy by Estes' criteria<br>
+				8) Maximum Heart Rate Achieved: <input type="text" id="thalach"><br>
+				9) Exercise Induced Angina:<br>
+		 			<input type="radio" name="exang" value=0>NO<br>
+		 			<input type="radio" name="exang" value=1>YES<br>
+				10) ST depression induced by exercise relative to rest:<input type="text" id="oldpeak"><br>
+				11) The slope of the peak exercise ST segment:<br> 
+					<input type="radio" name="slope" value=1>Upsloping<br>
+		 			<input type="radio" name="slope" value=2>Flat<br>
+		 			<input type="radio" name="slope" value=3>Downsloping<br>
+				12)	Number of major vessels (0-3) colored by flourosopy:<input type="number" id="ca" min="0" max="3"><br>
+				13) Thal: <input type="number" id="thal" min="0" max="7"><br>
+				14) Diagnosis of Heart Disease (angiographic disease status):<br>
+		    		<input type="radio" name="num" value=0> < 50% diameter narrowing <br>
+		 			<input type="radio" name="num" value=1> > 50% diameter narrowing <br>	
+
+     			</div>
+      			<div class="modal-footer">
+        			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        			<button type="button" class="btn btn-primary">Save changes</button>
+      			</div>
+    			</div>
+  			</div>
+		</div>
+		<!-- <div class="button-container">
+			<button type="button" class="btn btn-secondary" onclick="location.href='form.html';">Fill Form</button>	
+		</div> -->	
+
+
+	<!--  <div class="container-text">
+		<h1>We Care for Your Health Every Moment</h1>
+		<p>Fill up a Simple Survey and get to know about all the possible heart risks that you may have, ahead of time.
+  		So, that you can enjoy a helthy life, all the time:)</p>
 	</div>
 	<div id="container-button">
 		<div class="clear"><a href="form.html"><input type="submit" class="btn-class" value="GO TO THE FORM" name="formButton" id="mc-embedded-subscribe" class="button"></a></div>
 	</div>
 	<div id="container-button2">
 		<div class="clear"><a href=""><input type="submit" class="btn-class" value="SUBSCRIBE" name="subscribe" id="mc-embedded-subscribe" class="button"></a></div>
-	</div>
+	</div> -->
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>

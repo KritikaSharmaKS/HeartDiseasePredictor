@@ -1,12 +1,11 @@
-body{
+/*body{
 	background: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/85/54/9957ccc8955ec52.jpg") no-repeat center fixed;
 	background-size: cover;
 }
 
 #container-button {
 	width: 92%;
-    height: 76%;
-    /*border: 1px solid black;*/ 
+    height: 76%;    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,7 +14,6 @@ body{
 #container-button2 {
 	width: 92%;
     height: 76%;
-    /*border: 1px solid black;*/ 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,4 +34,38 @@ body{
 
 .btn-class:hover{
 	transform: scale(1.1);
+}*/
+
+
+p{
+	background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/85/54/9957ccc8955ec52.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #FFFF00;
+	font-weight: bold;
+	font-size: 150%;
+	text-align: center;
+	/*text-transform: uppercase;*/
+	padding: 13%;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+
+.button-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.btn-secondary{
+	border: black solid 2px;
+	background-color: transparent;
+	border-radius: 0;
+	color: black;
+	font-weight: bold;
+	font-family: 'Source Serif Pro', serif;
+
+}
+
+.nav-link{
+	
 }
