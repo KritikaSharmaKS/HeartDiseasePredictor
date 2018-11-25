@@ -9,6 +9,16 @@ $(document).ready(function(){
 	});
 });
 
+$("#getStarted").click(function(){
+	$('html, body').animate({
+		scrollTop: $("#services").offset().top
+	}, 500);
+	return false;
+});
+
+
+
+
 $("#formfordoc").click(function(){
 	$('#exampleModalLong').modal('show');
 });
